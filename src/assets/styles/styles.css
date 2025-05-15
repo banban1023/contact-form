@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/Karla-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'karla';
+}
+.app {
+  min-height: 100vh;
+  background-color: hsl(148, 38%, 91%);
+  padding: 33px 17px;
+}
+.app section {
+  background-color: hsl(0, 0%, 100%);
+  padding: 22px 25px;
+  border-radius: 15px;
+}
+.app section h1 {
+  font-size: 32px;
+  color: hsl(187, 24%, 22%);
+}
+.app section form {
+  margin-top: 30px;
+  color: hsl(187, 24%, 22%);
+}
+.app section form fieldset section {
+  padding: 15px 25px;
+  border: 1px solid hsl(186, 15%, 59%);
+  margin-top: 18px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+.app section form fieldset section input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-right: 15px;
+}
+.app section form fieldset section label {
+  display: inline-block;
+}
+.app section form label {
+  display: block;
+}
+.app section form input {
+  margin-top: 10px;
+  height: 51px;
+  width: 100%;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 7px;
+  padding-left: 20px;
+}
+.app section form input:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+  outline: none;
+}
+.app section form .checkbox-group {
+  display: flex;
+}
+.app section form .checkbox-group input {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.app section form textarea {
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 10px;
+  padding: 20px;
+  height: 240px;
+  width: 100%;
+  margin-top: 12px;
+}
+.app section form textarea:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+  outline: none;
+}
+.app section form .error-message {
+  height: 32px;
+  line-height: 32px;
+  color: red;
+}
+.app section form fieldset {
+  border: none;
+}
+.app section form button {
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  display: block;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+}
