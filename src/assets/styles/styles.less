@@ -67,10 +67,12 @@
       }
       .checkbox-group {
         display: flex;
+        display: flex;
+        align-items: center;
         input {
           width: 20px;
           height: 20px;
-          margin-right: 20px;
+          margin: 0 20px 0 0;
         }
       }
       textarea {
@@ -86,9 +88,14 @@
         }
       }
       .error-message{
+        display: block;
+        height: 32px;
+        line-height: 20px;
+        color: red;
+      }
+      .no-error {
         height: 32px;
         line-height: 32px;
-        color: red;
       }
       fieldset {
         border: none;
@@ -101,6 +108,84 @@
         width: 100%;
         height: 60px;
         border-radius: 10px;
+        margin-top: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+  .fade-only-enter-active,
+  .fade-only-leave-active {
+    transition: opacity 0.6s ease;
+  }
+  .fade-only-enter-from,
+  .fade-only-leave-to {
+    opacity: 0;
+  }
+  .fade-only-enter-to,
+  .fade-only-leave-from {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 738px) {
+  .app {
+    display: flex;
+    justify-content: center;
+    input {
+      cursor: pointer;
+    }
+    section {
+      width: 100%;
+      max-width: 737px;
+      padding: 40px;
+      height: 100%;
+      form {
+        .name {
+          display: flex;
+          justify-content: space-between;
+          input {
+            width: 320px;
+          }
+        }
+        fieldset {
+          display: flex;
+          flex-wrap: wrap;
+          section {
+            width: 320px;
+            cursor: pointer;
+            &:nth-of-type(2) {
+              margin-left: 17px;
+            }
+            label {
+              cursor: pointer;
+            }
+          }
+          span, div {
+            width: 657px;
+          }
+        }
+        textarea {
+          height: 106px;
+          cursor: pointer;
+        }
+        .checkbox-group {
+          label {
+            cursor: pointer;
+          }
+        }
+        .error-message{
+          display: block;
+          height: 25px;
+          line-height: 20px;
+          color: red;
+        }
+        .no-error {
+          height: 25px;
+          line-height: 32px;
+        }
+        button {
+          cursor: pointer;
+        }
       }
     }
   }
