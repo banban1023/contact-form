@@ -58,7 +58,9 @@
 
         <fieldset aria-describedby="query-error">
           <legend>Query Type</legend>
-          <section>
+          <section
+          @click="form.queryType = 'enquiry'"
+    :class="{ 'selected-option': form.queryType === 'enquiry' }">
             <input
               type="radio"
               id="enquiry"
@@ -69,7 +71,9 @@
             >
             <label for="enquiry">General Enquiry</label>
           </section>
-          <section>
+          <section
+          @click="form.queryType = 'request'"
+    :class="{ 'selected-option': form.queryType === 'request' }">
             <input
               type="radio"
               id="request"
@@ -124,7 +128,7 @@
         >To submit this form, please consent to being contacted</span>
         <div aria-hidden v-else class="no-error"></div>
 
-        <button type="submit">Submit</button>
+        <button aria-busy="true" aria-label="Submit contact form" type="submit">Submit</button>
       </form>
     </section>
     <transition name="fade-only">

@@ -27,6 +27,9 @@
   margin-top: 30px;
   color: hsl(187, 24%, 22%);
 }
+.app section form fieldset {
+  /* 选中时的样式 */
+}
 .app section form fieldset section {
   padding: 15px 25px;
   border: 1px solid hsl(186, 15%, 59%);
@@ -43,6 +46,17 @@
 }
 .app section form fieldset section label {
   display: inline-block;
+}
+.app section form fieldset .selected-option {
+  background-color: hsl(148, 38%, 91%);
+  /* 绿色背景 */
+  border-color: hsl(169, 82%, 27%);
+  /* 边框颜色 */
+}
+.app section form fieldset .selected-option input[type="radio"] {
+  accent-color: hsl(169, 82%, 27%);
+  /* 选中时的颜色 */
+  cursor: pointer;
 }
 .app section form label {
   display: block;
@@ -142,8 +156,8 @@
     flex-wrap: wrap;
   }
   .app section form fieldset section {
-    width: 320px;
     cursor: pointer;
+    width: 320px;
   }
   .app section form fieldset section:nth-of-type(2) {
     margin-left: 17px;
@@ -159,7 +173,8 @@
     height: 106px;
     cursor: pointer;
   }
-  .app section form .checkbox-group label {
+  .app section form .checkbox-group input,
+  .app section form .checkbox-group span {
     cursor: pointer;
   }
   .app section form .error-message {
@@ -174,5 +189,8 @@
   }
   .app section form button {
     cursor: pointer;
+  }
+  .app section form button:hover {
+    background-color: hsl(187, 24%, 22%);
   }
 }
