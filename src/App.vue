@@ -3,6 +3,9 @@
     <section>
       <h1>Contact Us</h1>
       <form action="#" @submit.prevent="validateForm">
+        <div aria-live="assertive" class="sr-only">
+          {{ Object.values(error).filter(Boolean).length > 0 ? "Form has errors" : "" }}
+        </div>
         <div class="name">
           <div class="fitstN">
             <label for="F-name">First Name<span class="star">*</span></label>
@@ -18,6 +21,7 @@
               id="fname-error"
               class="error-message"
               v-if="error.firstName"
+              aria-live="polite"
             >This field is required</span>
             <div aria-hidden v-else class="no-error"></div>
           </div>
@@ -36,6 +40,7 @@
               id="lname-error"
               class="error-message"
               v-if="error.lastName"
+              aria-live="polite"
             >This field is required</span>
             <div aria-hidden v-else class="no-error"></div>
           </div>
@@ -53,6 +58,7 @@
         <span
           class="error-message"
           v-if="error.email"
+          aria-live="polite"
         >{{ emailErrorMessage }}</span>
         <div aria-hidden v-else class="no-error"></div>
 
@@ -87,6 +93,7 @@
           <span
             id="query-error"
             class="error-message"
+            aria-live="polite"
             v-if="error.queryType"
           >Please select a query type</span>
           <div aria-hidden v-else class="no-error"></div>
@@ -107,6 +114,7 @@
           id="message-error"
           class="error-message"
           v-if="error.message"
+          aria-live="polite"
         >This field is required</span>
         <div aria-hidden v-else class="no-error"></div>
 
@@ -125,6 +133,7 @@
           id="checkbox-error"
           class="error-message"
           v-if="error.accept"
+          aria-live="polite"
         >To submit this form, please consent to being contacted</span>
         <div aria-hidden v-else class="no-error"></div>
 
@@ -203,7 +212,7 @@ export default {
         // 添加滚动到顶部代码
         window.scrollTo({
           top: 0,
-          behavior: 'smooth' // 可选：平滑滚动
+          behavior: 'smooth' // 平滑滚动
         })
         setTimeout(() => {
           this.submitted = false

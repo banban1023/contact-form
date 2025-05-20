@@ -31,6 +31,17 @@
   margin-top: 30px;
   color: hsl(187, 24%, 22%);
 }
+.app section form .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 .app section form fieldset {
   /* 选中时的样式 */
 }
