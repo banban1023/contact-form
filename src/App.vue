@@ -5,7 +5,7 @@
       <form action="#" @submit.prevent="validateForm">
         <div class="name">
           <div class="fitstN">
-            <label for="F-name">First Name</label>
+            <label for="F-name">First Name<span class="star">*</span></label>
             <input
               type="text"
               id="F-name"
@@ -23,7 +23,7 @@
           </div>
 
           <div class="lastN">
-            <label for="L-name">Last Name</label>
+            <label for="L-name">Last Name<span class="star">*</span></label>
             <input
               type="text"
               id="L-name"
@@ -41,7 +41,7 @@
           </div>
           </div>
 
-        <label for="email">Email Address</label>
+        <label for="email">Email Address<span class="star">*</span></label>
         <input
           type="email"
           name="email"
@@ -57,7 +57,7 @@
         <div aria-hidden v-else class="no-error"></div>
 
         <fieldset aria-describedby="query-error">
-          <legend>Query Type</legend>
+          <legend>Query Type<span class="star">*</span></legend>
           <section
           @click="form.queryType = 'enquiry'"
     :class="{ 'selected-option': form.queryType === 'enquiry' }">
@@ -92,7 +92,7 @@
           <div aria-hidden v-else class="no-error"></div>
         </fieldset>
 
-        <label for="message">Message</label>
+        <label for="message">Message<span class="star">*</span></label>
         <textarea
           name="message"
           id="message"
@@ -119,7 +119,7 @@
             v-model="form.accept"
             @change="validateField('accept')"
           >
-          <label for="accept">I consent to being contacted by the team</label>
+          <label for="accept">I consent to being contacted by the team<span class="star">*</span></label>
         </div>
         <span
           id="checkbox-error"

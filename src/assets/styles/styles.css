@@ -9,6 +9,10 @@
   box-sizing: border-box;
   font-family: 'karla';
 }
+.star {
+  margin-left: 10px;
+  color: hsl(169, 82%, 27%);
+}
 .app {
   min-height: 100vh;
   background-color: hsl(148, 38%, 91%);
